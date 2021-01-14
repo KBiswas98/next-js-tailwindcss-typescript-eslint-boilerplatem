@@ -1,0 +1,93 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.pos {
+    display: none;
+}
+
+.pos:hover {
+    display: flex;
+    cursor: pointer;
+}
+
+.pos::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+.no-bar::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+.scroll-hide:hover + .pos {
+    cursor: pointer;
+    display: flex;
+}
+
+#category-popup {
+    display: none;
+}
+
+#category-popup:hover {
+    display: flex;
+}
+
+#category:hover ~ #category-popup {
+    display: flex;
+}
+
+.d-link:hover {
+    cursor: pointer;
+}
+
+.grid-containers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 5px 5px;
+    grid-template-areas:
+        "left-image-1 left-image-1 right-image-1 right-image-1"
+        "left-image-1 left-image-1 right-image-1 right-image-1"
+        "left-image-2 left-image-2 right-image-1 right-image-1"
+        "left-image-2 left-image-2 right-image-1 right-image-1"
+        "left-image-2 left-image-2 right-image-2 right-image-2"
+        "left-image-2 left-image-2 right-image-2 right-image-2"
+        "left-image-3 left-image-3 right-image-2 right-image-2"
+        "left-image-3 left-image-3 right-image-2 right-image-2"
+        "left-image-3 left-image-3 right-image-3 right-image-3"
+        "left-image-3 left-image-3 right-image-3 right-image-3";
+}
+.left-image-1 {
+    grid-area: left-image-1;
+}
+.right-image-1 {
+    grid-area: right-image-1;
+}
+.left-image-2 {
+    grid-area: left-image-2;
+}
+.right-image-2 {
+    grid-area: right-image-2;
+}
+.left-image-3 {
+    grid-area: left-image-3;
+}
+.right-image-3 {
+    grid-area: right-image-3;
+}
+
+.center-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.center-image {
+    display: table-cell;
+    vertical-align: bottom;
+}
